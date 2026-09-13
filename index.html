@@ -27,16 +27,12 @@
 
   <!-- BROWSE VIEW -->
   <section class="view" id="viewBrowse">
-    <div class="guidelines">Reminders: include a carb, veg, and protein · no shellfish · keep the week varied.</div>
-
     <div class="toolbar">
       <input type="text" id="search" placeholder="Search meals or ingredients…">
       <div class="sort-control">
         <label for="sortSelect">Sort</label>
         <select id="sortSelect">
-          <option value="recent">Most recent</option>
-          <option value="oldest">Least recent</option>
-          <option value="popular">Most popular</option>
+          <option value="added">Recently added</option>
           <option value="az">A–Z</option>
         </select>
       </div>
@@ -71,12 +67,18 @@
           <h2>This Week's Schedule</h2>
           <span class="week-range" id="weekRange"></span>
         </div>
-        <p class="hint">Drag a meal card onto a day (or use the day picker on mobile).</p>
-        <div class="schedule-grid" id="scheduleGrid"></div>
+        <p class="hint">Drag a meal onto a day (or use its dropdown on mobile). Add a note on a day with no meal — an event, eating out, etc.</p>
 
         <div class="unscheduled-block" id="unscheduledBlock">
           <h3>Unscheduled <span class="muted-count" id="unscheduledCount"></span></h3>
           <div class="day-column unscheduled-column" id="unscheduledColumn" data-day="unscheduled"></div>
+        </div>
+
+        <div class="schedule-grid" id="scheduleGrid"></div>
+
+        <div class="list-actions">
+          <button class="btn-mustard" id="shareImageBtn">Copy plan as image</button>
+          <span class="copied-flash" id="imageFlash" style="display:none;"></span>
         </div>
       </div>
 

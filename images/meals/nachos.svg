@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="nachos">
+  <ellipse cx="200" cy="244" rx="120" ry="15" fill="#2B2B26" opacity="0.08"/>
+  <circle cx="200" cy="148" r="110" fill="#FFFFFF" stroke="#E4DBC7" stroke-width="5"/>
+  <circle cx="200" cy="148" r="88" fill="none" stroke="#E4DBC7" stroke-width="2"/>
+  
+  <path d="M150,196 L172,140 L198,196 Z" fill="#C98A2C" transform="rotate(-8 172 196)"/>
+  <path d="M180,200 L206,132 L232,200 Z" fill="#DDA23F" transform="rotate(4 206 200)"/>
+  <path d="M212,198 L236,146 L260,198 Z" fill="#C98A2C" transform="rotate(10 236 198)"/>
+  <path d="M160,190 Q200,206 246,188" fill="none" stroke="#F0DCB4" stroke-width="10" stroke-linecap="round"/>
+  <path d="M172,178 Q200,192 230,174" fill="none" stroke="#F0DCB4" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="184" cy="168" r="6" fill="none" stroke="#33472F" stroke-width="3"/>
+  <circle cx="220" cy="160" r="5" fill="none" stroke="#33472F" stroke-width="3"/>
+  <ellipse cx="205" cy="200" rx="10" ry="6" fill="#FFFFFF"/>
+
+</svg>

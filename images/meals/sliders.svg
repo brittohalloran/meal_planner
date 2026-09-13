@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="sliders">
+  <ellipse cx="200" cy="244" rx="120" ry="15" fill="#2B2B26" opacity="0.08"/>
+  <circle cx="200" cy="148" r="110" fill="#FFFFFF" stroke="#E4DBC7" stroke-width="5"/>
+  <circle cx="200" cy="148" r="88" fill="none" stroke="#E4DBC7" stroke-width="2"/>
+  
+  <path d="M138,178 Q166,170 194,178 L194,184 Q166,192 138,184 Z" fill="#E8C88F" stroke="#B9791F" stroke-width="2"/>
+  <rect x="140" y="166" width="52" height="10" rx="2" fill="#2B2B26"/>
+  <path d="M139,158 L193,158 L188,166 L144,166 Z" fill="#33472F"/>
+  <path d="M142,148 Q166,134 190,148 Q190,158 166,160 Q142,158 142,148 Z" fill="#E8C88F" stroke="#B9791F" stroke-width="2"/>
+
+  <path d="M206,178 Q234,170 262,178 L262,184 Q234,192 206,184 Z" fill="#E8C88F" stroke="#B9791F" stroke-width="2"/>
+  <rect x="208" y="166" width="52" height="10" rx="2" fill="#2B2B26"/>
+  <path d="M207,158 L261,158 L256,166 L212,166 Z" fill="#33472F"/>
+  <path d="M210,148 Q234,134 258,148 Q258,158 234,160 Q210,158 210,148 Z" fill="#E8C88F" stroke="#B9791F" stroke-width="2"/>
+
+</svg>

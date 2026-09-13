@@ -43,112 +43,127 @@ function categoryFor(name){
 
 /* ---------- Default meal library ---------- */
 const DEFAULT_MEALS = [
- {name:"Lemon Parmesan Sausage Rigatoni with Kale", lastMade:"9/9", ingredients:["Rigatoni","Italian Sausage","Garlic","Heavy Cream","Chicken Broth","Kale","Lemon","Parmigiano-Reggiano","Brown Bread"]},
- {name:"Pulled Pork Paninis", lastMade:"9/8", ingredients:["Pulled Pork","Ciabatta Rolls","Sharp Cheddar","Coleslaw","BBQ Sauce","Dill Pickles","Red Onion"]},
- {name:"Smash Burgers", lastMade:"9/7", ingredients:["Beef","American Cheese","Pickles","Bacon Jam","Yellow Onion","Iceberg Lettuce","Buns","Waffle Fries","Bell Peppers"]},
- {name:"Tik Tok Pasta (Baked Feta)", lastMade:"9/2", ingredients:["Rigatoni","Feta","Cherry Tomatoes","Brown Bread","Salad"]},
- {name:"Prosciutto Paninis", lastMade:"9/1", ingredients:["French Bread","Prosciutto","Brie Cheese","Arugula","Fig Jam","Tomato Basil Soup","Caesar Salad Kit"]},
- {name:"Chicken Spinach Orzo", lastMade:"8/31", ingredients:["Chicken Thighs","Orzo","Chicken Broth","Baby Spinach","Garlic","Yellow Onion","Lemon","Parmigiano-Reggiano"]},
- {name:"Butter Chicken", lastMade:"8/23", ingredients:["Butter Chicken Sauce","Chicken Thighs","Rice","Naan","Cauliflower"]},
- {name:"Pulled Pork Sandwiches", lastMade:"8/20", ingredients:["Pulled Pork","Buns","Coleslaw","Baked Beans"]},
- {name:"Vodka Sausage Rigatoni/Cellantini", lastMade:"8/19", ingredients:["Cellantini","Vodka Sauce","Heavy Whipping Cream","Ground Sausage","Broccoli","Brown Bread"]},
- {name:"Stuffed Peppers", lastMade:"8/13", ingredients:["Bell Peppers","Ground Beef","Rice","Marinara","Mozzarella","French Bread","Salad"]},
- {name:"Greek Chicken Bowls", lastMade:"8/12", ingredients:["Rotisserie Chicken","Rice","Cucumber","Grape Tomatoes","Kalamata Olives","Hummus","Tzatziki","Feta"]},
- {name:"Chicken Parmesan (Little Big Meal)", lastMade:"8/11", ingredients:["Chicken Cutlets","Marinara","Mozzarella","Rigatoni"]},
- {name:"Blackstone Breakfast", lastMade:"8/2", ingredients:["Eggs","Pancakes","Bacon","Hash Browns"]},
- {name:"Grilled Skirt Steak", lastMade:"7/12", ingredients:["Skirt Steak","Chimichurri","Fingerling Potatoes","Salad"]},
- {name:"Protein Bowls", lastMade:"7/1", ingredients:["Rice","Black Beans","Corn","Hard Boiled Eggs","Avocado","Pickled Red Onions","Korean Beef","Salsa"]},
- {name:"Korean Beef Bowls", lastMade:"5/18", ingredients:["Rice","Korean Beef","Broccoli","Potstickers"]},
- {name:"Korean Beef or Tikka Masala + Rice + Broccoli", lastMade:"6/23", ingredients:["Korean Beef","Tikka Masala Sauce","Rice","Broccoli"]},
- {name:"Gyros", lastMade:"5/26", ingredients:["Gyro Meat","Pita","Tzatziki","Cucumber","Tomatoes","Red Onion","Lemon"]},
- {name:"Carnitas / Slow Cooker Pork Tacos", lastMade:"5/25", ingredients:["Pork Shoulder","Corn Tortillas","Limes","Cilantro","Pickled Red Onions","Sour Cream","Queso Fresco","Tortilla Chips","Salsa"]},
- {name:"Lemon Spinach Ricotta Pasta w/ Shrimp", lastMade:"5/21", shellfish:true, ingredients:["Rigatoni","Ricotta","Lemon Zest","Basil","Baby Spinach","Shrimp","Brown Bread"]},
- {name:"Sheet Pan Sausage & Veggies", lastMade:"5/20", ingredients:["Kielbasa","Bell Peppers","Zucchini","Red Onion","French Bread"]},
- {name:"Burrito Bowls", lastMade:"5/11", ingredients:["Chicken","Hard Boiled Eggs","Rice","Black Beans","Avocado","Corn","Queso Fresco","Pickled Red Onion","Cilantro"]},
- {name:"Carnitas Nachos", lastMade:"5/3", ingredients:["Tortilla Chips","Carnitas","Black Olives","Refried Beans","Oaxaca Cheese","Monterey Jack"]},
- {name:"Rotisserie Chicken Sliders", lastMade:"5/7", ingredients:["Rotisserie Chicken","Hawaiian Rolls","Swiss Cheese","Chik-Fil-A Sauce","Pickles","Sweet Potato Fries"]},
- {name:"Carbonara", lastMade:"5/5", ingredients:["Bucatini","Pancetta","Pecorino Romano","Eggs"]},
- {name:"Flank Steak, Broccoli & Mashed Potato", lastMade:"4/29", ingredients:["Flank Steak","Broccoli","Mashed Potato"]},
- {name:"Slow Cooker Pot Roast", lastMade:"4/21", ingredients:["Chuck Roast","Fingerling Potatoes","Carrots","Yellow Onion","Horseradish Sauce","French Bread","Salad"]},
- {name:"Ham & Swiss Sliders", lastMade:"4/13", ingredients:["Ham","Swiss Cheese","Hawaiian Rolls","Pickles","Chik-Fil-A Sauce","Sweet Potato Fries"]},
- {name:"Brats & Dogs", lastMade:"4/12", ingredients:["Bratwurst","Hot Dogs","Buns","Relish","Sauerkraut","Fruit Salad","Chips"]},
- {name:"Steaks & Wedge Salad", lastMade:"3/22", ingredients:["Steak","Iceberg Lettuce","Sharp Cheddar","Bacon","Tomatoes","Fingerling Potatoes","French Bread"]},
- {name:"Rotisserie Chicken Tacos", lastMade:"3/2", ingredients:["Rotisserie Chicken","Corn Tortillas","Salsa","Sour Cream"]},
- {name:"Ribs, Coleslaw & Cornbread", lastMade:"3/1", ingredients:["Ribs","Coleslaw","Cornbread","Baked Beans"]},
- {name:"Chicken, Broccoli & Rice Bowls", lastMade:"2/17", ingredients:["Chicken","Broccoli","Rice","Honey Soy Sauce"]},
- {name:"Costco Tikka Masala, Rice & Naan", lastMade:"3/23", ingredients:["Tikka Masala Sauce","Rice","Naan","Broccoli"]},
- {name:"Burgers & Corn on the Cob", lastMade:"4/26", ingredients:["Ground Beef","Hamburger Buns","Corn on the Cob","Pasta Salad"]},
- {name:"Little Big Meal – Stir Fry Noodles", lastMade:"5/28", ingredients:["Rigatoni","Ground Beef","Broccoli"]},
- {name:"Little Big Meal – Crispy Chicken Cutlets", lastMade:"6/10", ingredients:["Chicken Cutlets","Rice","Broccoli"]},
- {name:"Mediterranean Skillet (Fresh Market)", lastMade:"4/15", ingredients:["Chicken","Rice","Feta","Tomatoes"]},
- {name:"Fresh Market Meatloaf", lastMade:"3/26", ingredients:["Ground Beef","Mashed Potato","Broccoli"]}
+ {name:"Lemon Parmesan Sausage Rigatoni with Kale", ingredients:["Rigatoni","Italian Sausage","Garlic","Heavy Cream","Chicken Broth","Kale","Lemon","Parmigiano-Reggiano","Brown Bread"]},
+ {name:"Pulled Pork Paninis", ingredients:["Pulled Pork","Ciabatta Rolls","Sharp Cheddar","Coleslaw","BBQ Sauce","Dill Pickles","Red Onion"]},
+ {name:"Smash Burgers", ingredients:["Beef","American Cheese","Pickles","Bacon Jam","Yellow Onion","Iceberg Lettuce","Buns","Waffle Fries","Bell Peppers"]},
+ {name:"Tik Tok Pasta (Baked Feta)", ingredients:["Rigatoni","Feta","Cherry Tomatoes","Brown Bread","Salad"]},
+ {name:"Prosciutto Paninis", ingredients:["French Bread","Prosciutto","Brie Cheese","Arugula","Fig Jam","Tomato Basil Soup","Caesar Salad Kit"]},
+ {name:"Chicken Spinach Orzo", ingredients:["Chicken Thighs","Orzo","Chicken Broth","Baby Spinach","Garlic","Yellow Onion","Lemon","Parmigiano-Reggiano"]},
+ {name:"Butter Chicken", ingredients:["Butter Chicken Sauce","Chicken Thighs","Rice","Naan","Cauliflower"]},
+ {name:"Pulled Pork Sandwiches", ingredients:["Pulled Pork","Buns","Coleslaw","Baked Beans"]},
+ {name:"Vodka Sausage Rigatoni/Cellantini", ingredients:["Cellantini","Vodka Sauce","Heavy Whipping Cream","Ground Sausage","Broccoli","Brown Bread"]},
+ {name:"Stuffed Peppers", ingredients:["Bell Peppers","Ground Beef","Rice","Marinara","Mozzarella","French Bread","Salad"]},
+ {name:"Greek Chicken Bowls", ingredients:["Rotisserie Chicken","Rice","Cucumber","Grape Tomatoes","Kalamata Olives","Hummus","Tzatziki","Feta"]},
+ {name:"Chicken Parmesan (Little Big Meal)", ingredients:["Chicken Cutlets","Marinara","Mozzarella","Rigatoni"]},
+ {name:"Blackstone Breakfast", ingredients:["Eggs","Pancakes","Bacon","Hash Browns"]},
+ {name:"Grilled Skirt Steak", ingredients:["Skirt Steak","Chimichurri","Fingerling Potatoes","Salad"]},
+ {name:"Protein Bowls", ingredients:["Rice","Black Beans","Corn","Hard Boiled Eggs","Avocado","Pickled Red Onions","Korean Beef","Salsa"]},
+ {name:"Korean Beef Bowls", ingredients:["Rice","Korean Beef","Broccoli","Potstickers"]},
+ {name:"Korean Beef or Tikka Masala + Rice + Broccoli", ingredients:["Korean Beef","Tikka Masala Sauce","Rice","Broccoli"]},
+ {name:"Gyros", ingredients:["Gyro Meat","Pita","Tzatziki","Cucumber","Tomatoes","Red Onion","Lemon"]},
+ {name:"Carnitas / Slow Cooker Pork Tacos", ingredients:["Pork Shoulder","Corn Tortillas","Limes","Cilantro","Pickled Red Onions","Sour Cream","Queso Fresco","Tortilla Chips","Salsa"]},
+ {name:"Lemon Spinach Ricotta Pasta w/ Shrimp", shellfish:true, ingredients:["Rigatoni","Ricotta","Lemon Zest","Basil","Baby Spinach","Shrimp","Brown Bread"]},
+ {name:"Sheet Pan Sausage & Veggies", ingredients:["Kielbasa","Bell Peppers","Zucchini","Red Onion","French Bread"]},
+ {name:"Burrito Bowls", ingredients:["Chicken","Hard Boiled Eggs","Rice","Black Beans","Avocado","Corn","Queso Fresco","Pickled Red Onion","Cilantro"]},
+ {name:"Carnitas Nachos", ingredients:["Tortilla Chips","Carnitas","Black Olives","Refried Beans","Oaxaca Cheese","Monterey Jack"]},
+ {name:"Rotisserie Chicken Sliders", ingredients:["Rotisserie Chicken","Hawaiian Rolls","Swiss Cheese","Chik-Fil-A Sauce","Pickles","Sweet Potato Fries"]},
+ {name:"Carbonara", ingredients:["Bucatini","Pancetta","Pecorino Romano","Eggs"]},
+ {name:"Flank Steak, Broccoli & Mashed Potato", ingredients:["Flank Steak","Broccoli","Mashed Potato"]},
+ {name:"Slow Cooker Pot Roast", ingredients:["Chuck Roast","Fingerling Potatoes","Carrots","Yellow Onion","Horseradish Sauce","French Bread","Salad"]},
+ {name:"Ham & Swiss Sliders", ingredients:["Ham","Swiss Cheese","Hawaiian Rolls","Pickles","Chik-Fil-A Sauce","Sweet Potato Fries"]},
+ {name:"Brats & Dogs", ingredients:["Bratwurst","Hot Dogs","Buns","Relish","Sauerkraut","Fruit Salad","Chips"]},
+ {name:"Steaks & Wedge Salad", ingredients:["Steak","Iceberg Lettuce","Sharp Cheddar","Bacon","Tomatoes","Fingerling Potatoes","French Bread"]},
+ {name:"Rotisserie Chicken Tacos", ingredients:["Rotisserie Chicken","Corn Tortillas","Salsa","Sour Cream"]},
+ {name:"Ribs, Coleslaw & Cornbread", ingredients:["Ribs","Coleslaw","Cornbread","Baked Beans"]},
+ {name:"Chicken, Broccoli & Rice Bowls", ingredients:["Chicken","Broccoli","Rice","Honey Soy Sauce"]},
+ {name:"Costco Tikka Masala, Rice & Naan", ingredients:["Tikka Masala Sauce","Rice","Naan","Broccoli"]},
+ {name:"Burgers & Corn on the Cob", ingredients:["Ground Beef","Hamburger Buns","Corn on the Cob","Pasta Salad"]},
+ {name:"Little Big Meal – Stir Fry Noodles", ingredients:["Rigatoni","Ground Beef","Broccoli"]},
+ {name:"Little Big Meal – Crispy Chicken Cutlets", ingredients:["Chicken Cutlets","Rice","Broccoli"]},
+ {name:"Mediterranean Skillet (Fresh Market)", ingredients:["Chicken","Rice","Feta","Tomatoes"]},
+ {name:"Fresh Market Meatloaf", ingredients:["Ground Beef","Mashed Potato","Broccoli"]}
 ];
 
+/* Maps a meal name to one of the local icon illustrations in images/meals/ */
 const MEAL_META = {
-  "Lemon Parmesan Sausage Rigatoni with Kale": {kw:"creamy-pasta", tc:1},
-  "Pulled Pork Paninis": {kw:"panini-sandwich", tc:1},
-  "Smash Burgers": {kw:"smash-burger", tc:6},
-  "Tik Tok Pasta (Baked Feta)": {kw:"baked-feta-pasta", tc:7},
-  "Prosciutto Paninis": {kw:"prosciutto-sandwich", tc:1},
-  "Chicken Spinach Orzo": {kw:"orzo", tc:6},
-  "Butter Chicken": {kw:"butter-chicken", tc:2},
-  "Pulled Pork Sandwiches": {kw:"pulled-pork", tc:2},
-  "Vodka Sausage Rigatoni/Cellantini": {kw:"vodka-pasta", tc:5},
-  "Stuffed Peppers": {kw:"stuffed-peppers", tc:3},
-  "Greek Chicken Bowls": {kw:"greek-bowl", tc:3},
-  "Chicken Parmesan (Little Big Meal)": {kw:"chicken-parmesan", tc:3},
-  "Blackstone Breakfast": {kw:"breakfast-skillet", tc:1},
-  "Grilled Skirt Steak": {kw:"grilled-steak", tc:1},
-  "Protein Bowls": {kw:"rice-bowl", tc:3},
-  "Korean Beef Bowls": {kw:"korean-beef-bowl", tc:2},
-  "Korean Beef or Tikka Masala + Rice + Broccoli": {kw:"tikka-masala", tc:2},
-  "Gyros": {kw:"gyro", tc:1},
-  "Carnitas / Slow Cooker Pork Tacos": {kw:"carnitas-tacos", tc:3},
-  "Lemon Spinach Ricotta Pasta w/ Shrimp": {kw:"shrimp-pasta", tc:1},
-  "Sheet Pan Sausage & Veggies": {kw:"sausage-veggies", tc:1},
-  "Burrito Bowls": {kw:"burrito-bowl", tc:3},
-  "Carnitas Nachos": {kw:"nachos", tc:1},
-  "Rotisserie Chicken Sliders": {kw:"chicken-sliders", tc:3},
-  "Carbonara": {kw:"carbonara", tc:1},
-  "Flank Steak, Broccoli & Mashed Potato": {kw:"flank-steak", tc:1},
-  "Slow Cooker Pot Roast": {kw:"pot-roast", tc:1},
-  "Ham & Swiss Sliders": {kw:"ham-sliders", tc:1},
-  "Brats & Dogs": {kw:"bratwurst", tc:1},
-  "Steaks & Wedge Salad": {kw:"wedge-salad-steak", tc:1},
-  "Rotisserie Chicken Tacos": {kw:"chicken-tacos", tc:1},
-  "Ribs, Coleslaw & Cornbread": {kw:"bbq-ribs", tc:1},
-  "Chicken, Broccoli & Rice Bowls": {kw:"chicken-rice-bowl", tc:1},
-  "Costco Tikka Masala, Rice & Naan": {kw:"tikka-masala", tc:2},
-  "Burgers & Corn on the Cob": {kw:"burger-corn", tc:1},
-  "Little Big Meal – Stir Fry Noodles": {kw:"stir-fry-noodles", tc:2},
-  "Little Big Meal – Crispy Chicken Cutlets": {kw:"crispy-chicken-cutlet", tc:2},
-  "Mediterranean Skillet (Fresh Market)": {kw:"mediterranean-skillet", tc:1},
-  "Fresh Market Meatloaf": {kw:"meatloaf", tc:1}
+  "Lemon Parmesan Sausage Rigatoni with Kale": {cat:"pasta"},
+  "Pulled Pork Paninis": {cat:"sandwich"},
+  "Smash Burgers": {cat:"burger"},
+  "Tik Tok Pasta (Baked Feta)": {cat:"pasta"},
+  "Prosciutto Paninis": {cat:"sandwich"},
+  "Chicken Spinach Orzo": {cat:"pasta"},
+  "Butter Chicken": {cat:"curry"},
+  "Pulled Pork Sandwiches": {cat:"sandwich"},
+  "Vodka Sausage Rigatoni/Cellantini": {cat:"pasta"},
+  "Stuffed Peppers": {cat:"stuffed-pepper"},
+  "Greek Chicken Bowls": {cat:"bowl"},
+  "Chicken Parmesan (Little Big Meal)": {cat:"pasta"},
+  "Blackstone Breakfast": {cat:"breakfast"},
+  "Grilled Skirt Steak": {cat:"steak"},
+  "Protein Bowls": {cat:"bowl"},
+  "Korean Beef Bowls": {cat:"bowl"},
+  "Korean Beef or Tikka Masala + Rice + Broccoli": {cat:"curry"},
+  "Gyros": {cat:"gyro"},
+  "Carnitas / Slow Cooker Pork Tacos": {cat:"taco"},
+  "Lemon Spinach Ricotta Pasta w/ Shrimp": {cat:"pasta"},
+  "Sheet Pan Sausage & Veggies": {cat:"sausage"},
+  "Burrito Bowls": {cat:"bowl"},
+  "Carnitas Nachos": {cat:"nachos"},
+  "Rotisserie Chicken Sliders": {cat:"sliders"},
+  "Carbonara": {cat:"pasta"},
+  "Flank Steak, Broccoli & Mashed Potato": {cat:"steak"},
+  "Slow Cooker Pot Roast": {cat:"roast"},
+  "Ham & Swiss Sliders": {cat:"sliders"},
+  "Brats & Dogs": {cat:"sausage"},
+  "Steaks & Wedge Salad": {cat:"steak"},
+  "Rotisserie Chicken Tacos": {cat:"taco"},
+  "Ribs, Coleslaw & Cornbread": {cat:"ribs"},
+  "Chicken, Broccoli & Rice Bowls": {cat:"bowl"},
+  "Costco Tikka Masala, Rice & Naan": {cat:"curry"},
+  "Burgers & Corn on the Cob": {cat:"burger"},
+  "Little Big Meal – Stir Fry Noodles": {cat:"pasta"},
+  "Little Big Meal – Crispy Chicken Cutlets": {cat:"chicken"},
+  "Mediterranean Skillet (Fresh Market)": {cat:"bowl"},
+  "Fresh Market Meatloaf": {cat:"roast"}
 };
 
-function hashCode(str){
-  let h = 0;
-  for(let i=0;i<str.length;i++){
-    h = (h*31 + str.charCodeAt(i)) >>> 0;
+const ICON_CATEGORIES = ["pasta","sandwich","burger","curry","stuffed-pepper","bowl","breakfast","steak","gyro","taco","sausage","nachos","sliders","roast","ribs","chicken"];
+
+/* Best-effort category guess for meals added by the user (no MEAL_META entry) */
+function guessIconCategory(meal){
+  const hay = (meal.name + ' ' + meal.ingredients.join(' ')).toLowerCase();
+  const rules = [
+    [/taco|tortilla/, 'taco'],
+    [/slider/, 'sliders'],
+    [/burger|patty/, 'burger'],
+    [/panini|sandwich|sub roll/, 'sandwich'],
+    [/pasta|rigatoni|spaghetti|penne|orzo|noodle|carbonara|bucatini|cellantini/, 'pasta'],
+    [/curry|tikka|masala/, 'curry'],
+    [/stuffed pepper/, 'stuffed-pepper'],
+    [/bowl|burrito/, 'bowl'],
+    [/egg|pancake|waffle|breakfast|bacon/, 'breakfast'],
+    [/steak/, 'steak'],
+    [/gyro/, 'gyro'],
+    [/sausage|bratwurst|kielbasa|hot dog|brat/, 'sausage'],
+    [/nacho/, 'nachos'],
+    [/roast|meatloaf/, 'roast'],
+    [/rib/, 'ribs'],
+    [/chicken/, 'chicken']
+  ];
+  for(const [re, cat] of rules){
+    if(re.test(hay)) return cat;
   }
-  return h % 500;
+  return 'custom';
 }
-function imageKeywordFor(meal){
-  if(MEAL_META[meal.name]) return MEAL_META[meal.name].kw;
-  const words = meal.name.toLowerCase().replace(/[^a-z\s]/g,'').split(/\s+/).filter(Boolean);
-  return words.slice(0,2).join('-') || 'homecooked-meal';
+
+function iconCategoryFor(meal){
+  const meta = MEAL_META[meal.name];
+  if(meta && meta.cat) return meta.cat;
+  return guessIconCategory(meal);
 }
-function timesCookedFor(meal){
-  return (MEAL_META[meal.name] && MEAL_META[meal.name].tc) || 1;
-}
+
 function imageUrlFor(meal){
-  return `https://loremflickr.com/400/300/${encodeURIComponent(imageKeywordFor(meal))}?lock=${hashCode(meal.id)}`;
-}
-function recencyValue(meal){
-  if(!meal.lastMade) return -1;
-  const parts = meal.lastMade.split('/');
-  if(parts.length!==2) return -1;
-  return parseInt(parts[0],10)*100 + parseInt(parts[1],10);
+  return `images/meals/${iconCategoryFor(meal)}.svg`;
 }
 
 /* ---------- Persistence (localStorage) ---------- */
@@ -156,7 +171,8 @@ const LS_KEYS = {
   library:'mp_meal_library',
   plan:'mp_plan_ids',
   assignments:'mp_day_assignments',
-  checked:'mp_checked_items'
+  checked:'mp_checked_items',
+  dayNotes:'mp_day_notes'
 };
 
 function loadJSON(key, fallback){
@@ -178,6 +194,7 @@ let meals = [];
 let planIds = new Set();
 let dayAssignments = {};
 let checkedItems = new Set();
+let dayNotes = {};
 let currentView = 'browse';
 
 function loadData(){
@@ -189,11 +206,13 @@ function loadData(){
   planIds = new Set(loadJSON(LS_KEYS.plan, []));
   dayAssignments = loadJSON(LS_KEYS.assignments, {});
   checkedItems = new Set(loadJSON(LS_KEYS.checked, []));
+  dayNotes = loadJSON(LS_KEYS.dayNotes, {});
 }
 function saveLibrary(){ saveJSON(LS_KEYS.library, meals); }
 function savePlan(){ saveJSON(LS_KEYS.plan, [...planIds]); }
 function saveAssignments(){ saveJSON(LS_KEYS.assignments, dayAssignments); }
 function saveChecked(){ saveJSON(LS_KEYS.checked, [...checkedItems]); }
+function saveDayNotes(){ saveJSON(LS_KEYS.dayNotes, dayNotes); }
 
 /* ---------- View switching ---------- */
 function setView(view){
@@ -224,9 +243,11 @@ function clearPlan(){
   planIds = new Set();
   dayAssignments = {};
   checkedItems = new Set();
+  dayNotes = {};
   savePlan();
   saveAssignments();
   saveChecked();
+  saveDayNotes();
   render();
 }
 
@@ -241,10 +262,8 @@ function renderGrid(){
     return hay.includes(search);
   });
 
-  if(sortBy==='recent') list.sort((a,b)=> recencyValue(b) - recencyValue(a));
-  else if(sortBy==='oldest') list.sort((a,b)=> recencyValue(a) - recencyValue(b));
-  else if(sortBy==='popular') list.sort((a,b)=> timesCookedFor(b) - timesCookedFor(a));
-  else if(sortBy==='az') list.sort((a,b)=> a.name.localeCompare(b.name));
+  if(sortBy==='az') list.sort((a,b)=> a.name.localeCompare(b.name));
+  /* 'added' = keep library order as-is (newest additions are unshifted to the front) */
 
   grid.innerHTML = '';
   if(list.length===0){
@@ -256,20 +275,15 @@ function renderGrid(){
     const card = document.createElement('div');
     const selected = planIds.has(m.id);
     card.className = 'grid-card' + (selected ? ' selected' : '');
-    const tc = timesCookedFor(m);
     card.innerHTML = `
       <div class="gc-image-wrap">
-        <img src="${imageUrlFor(m)}" alt="${m.name}" loading="lazy" onerror="this.style.display='none'">
+        <img src="${imageUrlFor(m)}" alt="${m.name}" loading="lazy">
       </div>
       <div class="gc-add-btn" title="${selected ? 'Remove from plan' : 'Add to plan'}">${selected ? '✓' : '+'}</div>
       <div class="gc-body">
         <p class="gc-name">${m.name}</p>
         <p class="gc-ingredients">${m.ingredients.join(', ')}</p>
-        <div class="gc-meta">
-          ${m.lastMade ? `<span class="tag tag-last">Last made ${m.lastMade}</span>` : ''}
-          <span class="tag tag-pop">Made ${tc}×</span>
-          ${m.shellfish ? `<span class="tag tag-shellfish">Shellfish</span>` : ''}
-        </div>
+        ${m.shellfish ? `<div class="gc-meta"><span class="tag tag-shellfish">Shellfish</span></div>` : ''}
       </div>
     `;
     card.addEventListener('click', ()=> togglePlan(m.id));
@@ -290,7 +304,7 @@ function togglePlan(id){
 }
 
 /* ---------- Week schedule ---------- */
-const DAY_NAMES = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
 function getWeekDates(){
   const today = new Date();
@@ -324,7 +338,7 @@ function mealById(id){
   return meals.find(m=>m.id===id);
 }
 
-function buildPlanCard(meal, assignedDay){
+function buildPlanCard(meal){
   const card = document.createElement('div');
   card.className = 'plan-card';
   card.draggable = true;
@@ -339,6 +353,7 @@ function buildPlanCard(meal, assignedDay){
     <select class="pc-day-select">${options.join('')}</select>
   `;
   const select = card.querySelector('.pc-day-select');
+  const assignedDay = dayAssignments[meal.id];
   select.value = (assignedDay===undefined || assignedDay===null) ? 'unscheduled' : String(assignedDay);
   select.addEventListener('click', e=> e.stopPropagation());
   select.addEventListener('change', ()=>{
@@ -394,24 +409,42 @@ function renderScheduleGrid(){
 
   scheduleGrid.innerHTML = '';
   DAY_NAMES.forEach((name, i)=>{
-    const wrap = document.createElement('div');
-    wrap.className = 'day-col-wrap';
-    wrap.innerHTML = `<div class="day-col-head"><span>${name}</span><span class="day-date">${formatDate(weekDates[i])}</span></div>`;
+    const row = document.createElement('div');
+    row.className = 'day-row';
+
+    const head = document.createElement('div');
+    head.className = 'day-row-head';
+    head.innerHTML = `<span class="day-row-name">${name}</span><span class="day-row-date">${formatDate(weekDates[i])}</span>`;
+
     const col = document.createElement('div');
     col.className = 'day-column';
     col.dataset.day = i;
     setupDropZone(col, i);
     planMeals.filter(m=>dayAssignments[m.id]===i).forEach(m=>{
-      col.appendChild(buildPlanCard(m, i));
+      col.appendChild(buildPlanCard(m));
     });
-    wrap.appendChild(col);
-    scheduleGrid.appendChild(wrap);
+
+    const note = document.createElement('input');
+    note.type = 'text';
+    note.className = 'day-note';
+    note.placeholder = 'No meal planned — e.g. "eating out"';
+    note.value = dayNotes[i] || '';
+    note.addEventListener('input', ()=>{
+      if(note.value.trim()) dayNotes[i] = note.value;
+      else delete dayNotes[i];
+      saveDayNotes();
+    });
+
+    row.appendChild(head);
+    row.appendChild(col);
+    row.appendChild(note);
+    scheduleGrid.appendChild(row);
   });
 
   unscheduledColumn.innerHTML = '';
   setupDropZone(unscheduledColumn, null);
   const unscheduled = planMeals.filter(m=> dayAssignments[m.id]===undefined || dayAssignments[m.id]===null);
-  unscheduled.forEach(m=> unscheduledColumn.appendChild(buildPlanCard(m, null)));
+  unscheduled.forEach(m=> unscheduledColumn.appendChild(buildPlanCard(m)));
 
   document.getElementById('unscheduledCount').textContent = `(${unscheduled.length})`;
 
@@ -495,6 +528,150 @@ function buildPlainTextList(){
   return text.trim();
 }
 
+/* ---------- Share plan as image ---------- */
+function drawWeekPlanCanvas(){
+  const weekDates = getWeekDates();
+  const planMeals = [...planIds].map(mealById).filter(Boolean);
+  const rowsData = DAY_NAMES.map((name, i)=>{
+    const dayMeals = planMeals.filter(m=>dayAssignments[m.id]===i).map(m=>m.name);
+    return { name, date: formatDate(weekDates[i]), meals: dayMeals, note: dayNotes[i] || '' };
+  });
+
+  const width = 720;
+  const rowHeight = 74;
+  const headerHeight = 96;
+  const footerHeight = 30;
+  const height = headerHeight + rowsData.length*rowHeight + footerHeight;
+
+  const canvas = document.createElement('canvas');
+  const scale = 2; // sharper export
+  canvas.width = width*scale;
+  canvas.height = height*scale;
+  const ctx = canvas.getContext('2d');
+  ctx.scale(scale, scale);
+
+  const paper = '#F6F1E6', ink = '#2B2B26', forestDark = '#243322', forest = '#33472F',
+        mustard = '#C98A2C', line = '#E4DBC7', muted = '#7A7568', card = '#FFFFFF';
+
+  ctx.fillStyle = paper;
+  ctx.fillRect(0,0,width,height);
+
+  ctx.fillStyle = forestDark;
+  ctx.font = '700 26px Georgia, "Source Serif 4", serif';
+  ctx.fillText('Weekly Meal Plan', 24, 42);
+
+  ctx.fillStyle = muted;
+  ctx.font = '600 14px Arial, sans-serif';
+  ctx.fillText(`${rowsData[0].date} – ${rowsData[6].date}`, 24, 66);
+
+  ctx.strokeStyle = forest;
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(24, headerHeight-16);
+  ctx.lineTo(width-24, headerHeight-16);
+  ctx.stroke();
+
+  let y = headerHeight;
+  rowsData.forEach((row, i)=>{
+    if(i%2===1){
+      ctx.fillStyle = card;
+      ctx.fillRect(24, y, width-48, rowHeight);
+    }
+    ctx.fillStyle = forest;
+    ctx.font = '700 15px Arial, sans-serif';
+    ctx.fillText(row.name, 40, y+30);
+    ctx.fillStyle = muted;
+    ctx.font = '600 12px Arial, sans-serif';
+    ctx.fillText(row.date, 40, y+48);
+
+    ctx.fillStyle = ink;
+    ctx.font = '400 15px Arial, sans-serif';
+    const textX = 170;
+    const maxWidth = width - textX - 40;
+    let content;
+    if(row.meals.length){
+      content = row.meals.join('  •  ');
+    }else if(row.note){
+      content = row.note;
+      ctx.font = 'italic 400 15px Arial, sans-serif';
+      ctx.fillStyle = muted;
+    }else{
+      content = '—';
+      ctx.fillStyle = '#C9C2AE';
+    }
+    wrapText(ctx, content, textX, y+30, maxWidth, 20, 2);
+
+    ctx.strokeStyle = line;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(24, y+rowHeight);
+    ctx.lineTo(width-24, y+rowHeight);
+    ctx.stroke();
+
+    y += rowHeight;
+  });
+
+  ctx.fillStyle = mustard;
+  ctx.font = '600 12px Arial, sans-serif';
+  ctx.fillText('Made with the family meal planner', 24, height-12);
+
+  return canvas;
+}
+
+function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines){
+  const words = text.split(' ');
+  let line = '';
+  let lines = [];
+  for(const word of words){
+    const test = line ? line + ' ' + word : word;
+    if(ctx.measureText(test).width > maxWidth && line){
+      lines.push(line);
+      line = word;
+    }else{
+      line = test;
+    }
+  }
+  lines.push(line);
+  if(lines.length > maxLines){
+    lines = lines.slice(0, maxLines);
+    lines[maxLines-1] = lines[maxLines-1].replace(/\s*\S*$/, '') + '…';
+  }
+  lines.forEach((l, i)=> ctx.fillText(l, x, y + i*lineHeight));
+}
+
+async function sharePlanImage(){
+  const canvas = drawWeekPlanCanvas();
+  canvas.toBlob(async (blob)=>{
+    if(!blob) return;
+    let copied = false;
+    try{
+      if(navigator.clipboard && window.ClipboardItem){
+        await navigator.clipboard.write([new ClipboardItem({'image/png': blob})]);
+        copied = true;
+      }
+    }catch(e){ /* clipboard image write not supported/allowed, fall back below */ }
+
+    const flash = document.getElementById('imageFlash');
+    if(copied){
+      flash.textContent = 'Copied image to clipboard!';
+      flash.style.display = 'inline';
+      setTimeout(()=> flash.style.display='none', 2200);
+    }else{
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'weekly-meal-plan.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      flash.textContent = 'Clipboard copy isn\'t supported here — downloaded instead.';
+      flash.style.display = 'inline';
+      setTimeout(()=> flash.style.display='none', 3200);
+    }
+  }, 'image/png');
+}
+
 /* ---------- Event wiring ---------- */
 document.getElementById('search').addEventListener('input', renderGrid);
 document.getElementById('sortSelect').addEventListener('change', renderGrid);
@@ -518,6 +695,8 @@ document.getElementById('copyBtn').addEventListener('click', async ()=>{
   flash.style.display = 'inline';
   setTimeout(()=> flash.style.display='none', 1800);
 });
+
+document.getElementById('shareImageBtn').addEventListener('click', sharePlanImage);
 
 document.getElementById('clearBtn').addEventListener('click', clearPlan);
 document.getElementById('clearPlanHeaderBtn').addEventListener('click', clearPlan);
