@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Meal Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>Weekly Meal Plan</h1>
+      <p>Pick this week's meals, drag them onto your schedule, and order the groceries in one shot.</p>
+    </div>
+    <nav class="view-tabs">
+      <button class="tab-btn active" id="tabBrowse" data-view="browse">Browse Meals</button>
+      <button class="tab-btn" id="tabPlan" data-view="plan">
+        My Plan <span class="plan-badge" id="planBadge">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- BROWSE VIEW -->
+  <section class="view" id="viewBrowse">
+    <div class="guidelines">Reminders: include a carb, veg, and protein · no shellfish · keep the week varied.</div>
+
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="Search meals or ingredients…">
+      <div class="sort-control">
+        <label for="sortSelect">Sort</label>
+        <select id="sortSelect">
+          <option value="recent">Most recent</option>
+          <option value="oldest">Least recent</option>
+          <option value="popular">Most popular</option>
+          <option value="az">A–Z</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="meals-grid" id="mealsGrid"></div>
+
+    <div class="add-meal-wrap">
+      <button class="toggle-add" id="toggleAddBtn">+ Add a new meal to your library</button>
+      <div class="add-meal-form panel" id="addForm" style="display:none;">
+        <div class="field">
+          <label>Meal name</label>
+          <input type="text" id="newMealName" placeholder="e.g. Sesame Salmon Bowls">
+        </div>
+        <div class="field">
+          <label>Ingredients (comma separated)</label>
+          <textarea id="newMealIngredients" rows="2" placeholder="Salmon, Rice, Sesame Oil, Broccoli, Green Onion"></textarea>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button class="btn-primary" id="saveMealBtn">Save meal</button>
+          <button class="btn-ghost" id="cancelAddBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN VIEW -->
+  <section class="view" id="viewPlan" hidden>
+    <div class="plan-layout">
+      <div class="panel schedule-panel">
+        <div class="panel-head">
+          <h2>This Week's Schedule</h2>
+          <span class="week-range" id="weekRange"></span>
+        </div>
+        <p class="hint">Drag a meal card onto a day (or use the day picker on mobile).</p>
+        <div class="schedule-grid" id="scheduleGrid"></div>
+
+        <div class="unscheduled-block" id="unscheduledBlock">
+          <h3>Unscheduled <span class="muted-count" id="unscheduledCount"></span></h3>
+          <div class="day-column unscheduled-column" id="unscheduledColumn" data-day="unscheduled"></div>
+        </div>
+      </div>
+
+      <div class="panel shopping-panel">
+        <div class="panel-head">
+          <h2>Shopping List</h2>
+        </div>
+        <div id="shoppingContent"></div>
+        <div class="list-actions">
+          <button class="btn-mustard" id="copyBtn">Copy list</button>
+          <button class="btn-ghost" id="clearBtn">Clear plan</button>
+          <span class="copied-flash" id="copiedFlash" style="display:none;">Copied!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
