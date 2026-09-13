@@ -70,6 +70,19 @@ body{
 }
 .tab-btn:hover{background:#EFE9DA;}
 .tab-btn.active{background:var(--forest); color:#fff;}
+.clear-plan-btn{
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:0.82rem;
+  padding:10px 14px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--muted);
+  cursor:pointer;
+}
+.clear-plan-btn:hover{border-color:var(--rust); color:var(--rust);}
+.clear-plan-btn[hidden]{display:none;}
 .plan-badge{
   background:var(--mustard);
   color:#fff;

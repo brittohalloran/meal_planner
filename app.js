@@ -215,6 +215,19 @@ function render(){
 
 function updatePlanBadge(){
   document.getElementById('planBadge').textContent = planIds.size;
+  document.getElementById('clearPlanHeaderBtn').hidden = planIds.size===0;
+}
+
+function clearPlan(){
+  if(planIds.size===0) return;
+  if(!confirm('Clear all meals from this week\'s plan?')) return;
+  planIds = new Set();
+  dayAssignments = {};
+  checkedItems = new Set();
+  savePlan();
+  saveAssignments();
+  saveChecked();
+  render();
 }
 
 function renderGrid(){
@@ -506,16 +519,8 @@ document.getElementById('copyBtn').addEventListener('click', async ()=>{
   setTimeout(()=> flash.style.display='none', 1800);
 });
 
-document.getElementById('clearBtn').addEventListener('click', ()=>{
-  if(!confirm('Clear all meals from this week\'s plan?')) return;
-  planIds = new Set();
-  dayAssignments = {};
-  checkedItems = new Set();
-  savePlan();
-  saveAssignments();
-  saveChecked();
-  render();
-});
+document.getElementById('clearBtn').addEventListener('click', clearPlan);
+document.getElementById('clearPlanHeaderBtn').addEventListener('click', clearPlan);
 
 document.getElementById('toggleAddBtn').addEventListener('click', ()=>{
   const form = document.getElementById('addForm');
